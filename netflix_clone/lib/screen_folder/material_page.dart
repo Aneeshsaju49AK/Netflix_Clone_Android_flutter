@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/splash_screen.dart';
+import 'package:netflix_clone/screen_folder/home_page.dart';
+import 'package:netflix_clone/screen_folder/splash_screen.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -8,6 +9,9 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/Netflix_Home': (context) => NetflixHomePage(),
+      },
       home: StartUpPage(),
     );
   }

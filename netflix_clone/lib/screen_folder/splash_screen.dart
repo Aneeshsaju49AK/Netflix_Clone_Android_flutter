@@ -24,8 +24,13 @@ class StartUpPage extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
+        // used stack to create the ui
         child: Stack(
           children: [
+            /* in this i used provider to acheive the rebuild of pages
+            with use of provider i  made listview builder to change the
+            ui as per the page changes --
+            UI images and text is accessed from the StartupPageProvider*/
             Consumer<StartUpPageProvider>(
               builder: (context, value, _) {
                 value.initController();
@@ -35,6 +40,8 @@ class StartUpPage extends StatelessWidget {
                   itemCount: value.images.length,
                   itemBuilder: (context, index) {
                     return Stack(children: [
+                      /* in this stack i were added a sizedbox with image and 
+                      inthe top i added a container to manage the Opacity of image */
                       SizedBox(
                         width: width / 1,
                         height: height / 1,
@@ -55,12 +62,14 @@ class StartUpPage extends StatelessWidget {
                 );
               },
             ),
+            // Netflix main logo
             SizedBox(
               child: Image.asset(
                 "assets/Images/4375011_logo_netflix_icon.png",
                 scale: 9,
               ),
             ),
+            // App bar buttons
             Positioned(
               left: width / 2.6,
               child: SizedBox(
@@ -94,6 +103,7 @@ class StartUpPage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    // App bar button ontop function
                     SizedBox(
                       width: width / 14,
                       height: height / 4,
@@ -137,6 +147,9 @@ class StartUpPage extends StatelessWidget {
                 ),
               ),
             ),
+            /* This consumer is done to change the text
+            of the Ui in the app it's image but i this i tried to 
+            have list of String from provider startupPageProvider */
             Consumer<StartUpPageProvider>(
               builder: (context, value, child) {
                 return Positioned(
@@ -217,21 +230,30 @@ class StartUpPage extends StatelessWidget {
             Positioned(
               top: height / 1.2,
               left: width / 21,
-              child: Container(
-                width: width / 1.1,
-                height: height / 14,
-                color: const Color.fromARGB(
-                  255,
-                  255,
-                  36,
-                  7,
-                ),
-                child: const Center(
-                  child: Text(
-                    "Restart Your Membership",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
+              child: InkWell(
+                splashColor: Colors.amber,
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    '/Netflix_Home',
+                  );
+                },
+                child: Container(
+                  width: width / 1.1,
+                  height: height / 14,
+                  color: const Color.fromARGB(
+                    255,
+                    255,
+                    36,
+                    7,
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Restart Your Membership",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),

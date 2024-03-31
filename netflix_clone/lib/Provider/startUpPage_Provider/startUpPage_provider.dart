@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class StartUpPageProvider extends ChangeNotifier {
+  /*In this i were declered the list which i needed in splash screen
+  one list is for images and other both used to text */
   List<String> images = [
     "assets/Images/netflix-s.avif",
     "assets/Images/3d-cinema-film-projector_23-2151024840.avif",
@@ -27,9 +29,13 @@ class StartUpPageProvider extends ChangeNotifier {
     "",
     "tablet, laptop, TV and more."
   ];
+  /*in this line declered the controller for splash screen*/
   late PageController controller;
+  // initial value set as 0;
   double currenIndex = 0;
-
+  /*this function is for replace the function init and
+ change the value of controller.
+ also used addlistener to notifiy the value change */
   void initController() {
     controller = PageController(
       initialPage: 0,
