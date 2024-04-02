@@ -15,10 +15,9 @@ class NetflixHomePage extends StatelessWidget {
       body: SafeArea(
         child: Consumer<NetflixHomePageProvider>(
           builder: (context, value, _) {
-            return Container(
+            return SizedBox(
               width: width / 1,
               height: height / 1,
-              color: Colors.amber,
               child: value.widgetOptions.elementAt(value.selectedIndex),
             );
           },

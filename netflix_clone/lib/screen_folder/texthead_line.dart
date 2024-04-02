@@ -8,8 +8,7 @@ class TextHeadLine extends StatelessWidget {
   Widget build(BuildContext context) {
     num width = MediaQuery.of(context).size.width;
     num height = MediaQuery.of(context).size.height;
-    return Container(
-      color: Colors.blue,
+    return SizedBox(
       width: width / 1,
       height: height / 25,
       child: Padding(
@@ -21,7 +20,7 @@ class TextHeadLine extends StatelessWidget {
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/common_widget-folder/elivated_button_common.dart';
+import 'package:netflix_clone/screen_folder/custom_button_linerstyle.dart';
 import 'package:netflix_clone/screen_folder/home_scrollable_listview.dart';
+import 'package:netflix_clone/screen_folder/top10_screen_widget.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -9,14 +11,12 @@ class HomePageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     num width = MediaQuery.of(context).size.width;
     num height = MediaQuery.of(context).size.height;
-    return Container(
-      color: Colors.amber,
+    return SizedBox(
       width: width / 1,
       height: height / 0.5,
       child: Stack(
         children: [
-          Container(
-            color: Colors.blue,
+          SizedBox(
             width: width / 1,
             height: height / 16,
             child: Row(
@@ -42,7 +42,7 @@ class HomePageScreen extends StatelessWidget {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Container(
+            child: SizedBox(
               width: width / 1,
               height: height / .2,
               child: Stack(
@@ -50,10 +50,9 @@ class HomePageScreen extends StatelessWidget {
                   Positioned(
                     top: height / 15,
                     left: 10,
-                    child: Container(
+                    child: SizedBox(
                       width: width / 1,
                       height: height / 16,
-                      color: Colors.cyan,
                       child: Row(
                         children: [
                           ElevatedButtonCommon(
@@ -92,7 +91,6 @@ class HomePageScreen extends StatelessWidget {
                         width: width / 1.1,
                         height: height / 1.6,
                         decoration: BoxDecoration(
-                          color: Colors.indigo,
                           borderRadius: BorderRadius.circular(20),
                           border: Border.all(color: Colors.grey),
                           image: DecorationImage(
@@ -105,13 +103,69 @@ class HomePageScreen extends StatelessWidget {
                     ),
                   ),
                   Positioned(
+                    top: height / 7,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 17,
+                        right: 10,
+                      ),
+                      child: Container(
+                        width: width / 1.1,
+                        height: height / 1.6,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: Colors.grey),
+                        ),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: width / 17,
+                              top: height / 1.9,
+                              child: Container(
+                                width: width / 1.1,
+                                height: height / 16,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      color: Colors.white,
+                                      width: width / 2.6,
+                                      height: height / 16,
+                                      child: CustomButtonLinerStyle(
+                                        image: "assets/icons/menu.png",
+                                        label: "play",
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Container(
+                                      color: Colors.black,
+                                      width: width / 2.6,
+                                      height: height / 16,
+                                      child: CustomButtonLinerStyle(
+                                        image: "assets/icons/menu.png",
+                                        label: "play",
+                                        imageColor: Colors.amber,
+                                        labelColor: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
                     top: height / 1.3,
                     child: Padding(
                       padding: const EdgeInsets.only(
                         top: 10,
                       ),
-                      child: Container(
-                        color: Colors.brown,
+                      child: SizedBox(
                         height: height / .2,
                         child: Column(
                           children: [
@@ -227,10 +281,7 @@ class HomePageScreen extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            ListViewScreen(
-                              isGameFalse: true,
-                              label: "Made in Korea",
-                            ),
+                            Top10ScreenWidget(),
                             SizedBox(
                               height: 10,
                             ),
