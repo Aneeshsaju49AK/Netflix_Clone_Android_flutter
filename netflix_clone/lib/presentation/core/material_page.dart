@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/screen_folder/home_page.dart';
-import 'package:netflix_clone/screen_folder/splash_screen.dart';
+import 'package:netflix_clone/presentation/widgets/Navigation_widget/home_page.dart';
+import 'package:netflix_clone/presentation/Splash_Screen/splash_screen.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});

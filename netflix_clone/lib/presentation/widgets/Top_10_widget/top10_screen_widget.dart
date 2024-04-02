@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/screen_folder/texthead_line.dart';
-import 'package:netflix_clone/screen_folder/top_10_movies.dart';
+import 'package:netflix_clone/presentation/widgets/Text_Common/texthead_line.dart';
+import 'package:netflix_clone/presentation/widgets/Top_10_widget/top_10_movies.dart';
 
 class Top10ScreenWidget extends StatelessWidget {
   const Top10ScreenWidget({super.key});
@@ -15,7 +15,12 @@ class Top10ScreenWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextHeadLine(label: "Top 10 Movies in india Today"),
+          TextHeadLine(
+            label: "Top 10 Movies in india Today",
+            heightSet: 25,
+            widthset: 1,
+            color: Colors.black,
+          ),
           const Top10WidgetScreen(),
         ],
       ),

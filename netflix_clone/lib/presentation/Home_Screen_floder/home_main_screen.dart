@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/common_widget-folder/elivated_button_common.dart';
-import 'package:netflix_clone/screen_folder/custom_button_linerstyle.dart';
-import 'package:netflix_clone/screen_folder/home_scrollable_listview.dart';
-import 'package:netflix_clone/screen_folder/top10_screen_widget.dart';
+import 'package:netflix_clone/presentation/widgets/ElevatedButtomCustom/elivated_button_common.dart';
+import 'package:netflix_clone/presentation/widgets/CustomButton_Screen/custom_button_linerstyle.dart';
+import 'package:netflix_clone/presentation/widgets/ListView_widget/home_scrollable_listview.dart';
+import 'package:netflix_clone/presentation/widgets/Top_10_widget/top10_screen_widget.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -16,30 +16,31 @@ class HomePageScreen extends StatelessWidget {
       height: height / 0.5,
       child: Stack(
         children: [
-          SizedBox(
-            width: width / 1,
-            height: height / 16,
-            child: Row(
-              children: [
-                Image.asset(
-                  "assets/Images/4375011_logo_netflix_icon.png",
-                  scale: 10,
-                ),
-                SizedBox(
-                  width: width / 1.4,
-                ),
-                Container(
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.search,
-                      size: 40,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          // Container(
+          //   color: Colors.grey,
+          //   width: width / 1,
+          //   height: height / 16,
+          //   child: Row(
+          //     children: [
+          //       Image.asset(
+          //         "assets/Images/4375011_logo_netflix_icon.png",
+          //         scale: 10,
+          //       ),
+          //       SizedBox(
+          //         width: width / 1.4,
+          //       ),
+          //       SizedBox(
+          //         child: IconButton(
+          //           onPressed: () {},
+          //           icon: Icon(
+          //             Icons.search,
+          //             size: 40,
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: SizedBox(
@@ -307,6 +308,31 @@ class HomePageScreen extends StatelessWidget {
                   // ),
                 ],
               ),
+            ),
+          ),
+          Container(
+            color: Colors.transparent.withOpacity(0.4),
+            width: width / 1,
+            height: height / 16,
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/Images/4375011_logo_netflix_icon.png",
+                  scale: 10,
+                ),
+                SizedBox(
+                  width: width / 1.4,
+                ),
+                SizedBox(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.search,
+                      size: 40,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

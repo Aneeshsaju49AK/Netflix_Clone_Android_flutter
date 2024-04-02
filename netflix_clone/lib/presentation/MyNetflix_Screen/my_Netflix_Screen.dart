@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NewHotScreen extends StatelessWidget {
-  const NewHotScreen({super.key});
+class MyNetflixScreen extends StatelessWidget {
+  const MyNetflixScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
