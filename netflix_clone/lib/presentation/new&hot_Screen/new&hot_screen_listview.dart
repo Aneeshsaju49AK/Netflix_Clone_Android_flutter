@@ -11,16 +11,14 @@ class ListViewNewAnHot extends StatelessWidget {
     return ListView.builder(
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Container(
+        return SizedBox(
           width: width / 1,
           height: height / 1.9,
-          color: Colors.blue,
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 width: width / 6,
                 height: height / 1.9,
-                color: Colors.indigo,
                 child: Stack(
                   children: [
                     Positioned(
@@ -50,7 +48,7 @@ class ListViewNewAnHot extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 width: width / 1.2,
                 height: height / 1.9,
                 child: Column(
@@ -59,7 +57,6 @@ class ListViewNewAnHot extends StatelessWidget {
                       width: width / 1.2,
                       height: height / 4,
                       decoration: BoxDecoration(
-                        color: Colors.green,
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
                             image: AssetImage("assets/Images/images (2).jpeg"),
@@ -69,10 +66,9 @@ class ListViewNewAnHot extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Container(
+                    SizedBox(
                       width: width / 1.2,
                       height: height / 11,
-                      color: Colors.lime,
                       child: Row(
                         children: [
                           Container(
@@ -85,10 +81,9 @@ class ListViewNewAnHot extends StatelessWidget {
                                   fit: BoxFit.fill),
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             width: width / 5,
                             height: height / 11,
-                            color: Colors.green,
                             child: Stack(
                               children: [
                                 Positioned(
@@ -114,10 +109,9 @@ class ListViewNewAnHot extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             width: width / 5,
                             height: height / 11,
-                            color: Colors.lightBlue,
                             child: Stack(
                               children: [
                                 Positioned(
@@ -146,10 +140,9 @@ class ListViewNewAnHot extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: width / 1.2,
                       height: height / 5.7,
-                      color: Colors.lightGreen,
                       child: Stack(
                         children: [
                           FittedBox(
@@ -164,18 +157,17 @@ class ListViewNewAnHot extends StatelessWidget {
                           ),
                           Positioned(
                             top: 30,
-                            child: Container(
+                            child: SizedBox(
                               width: width / 1,
                               height: height / 10,
-                              color: Colors.white,
                             ),
                           ),
                           Positioned(
                             top: 105,
-                            child: Container(
-                                width: width / 1,
-                                height: height / 28,
-                                color: Colors.blue),
+                            child: SizedBox(
+                              width: width / 1,
+                              height: height / 28,
+                            ),
                           )
                         ],
                       ),

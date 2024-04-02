@@ -11,10 +11,9 @@ class NewAANDHotScreen extends StatelessWidget {
     num width = MediaQuery.of(context).size.width;
     num height = MediaQuery.of(context).size.height;
     return SafeArea(
-      child: Container(
+      child: SizedBox(
         width: width / 1,
         height: height / 1,
-        color: Colors.amber,
         child: Stack(
           children: [
             Container(
@@ -56,7 +55,7 @@ class NewAANDHotScreen extends StatelessWidget {
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: Container(
+                    child: SizedBox(
                       child: Row(
                         children: [
                           SizedBox(
@@ -108,7 +107,7 @@ class NewAANDHotScreen extends StatelessWidget {
             ),
             Positioned(
               top: height / 6,
-              child: Container(
+              child: SizedBox(
                   height: height / 1,
                   width: width / 1,
                   child: ListViewNewAnHot()),
