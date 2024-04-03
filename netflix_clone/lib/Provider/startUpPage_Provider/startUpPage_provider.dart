@@ -40,10 +40,10 @@ class StartUpPageProvider extends ChangeNotifier {
     controller = PageController(
       initialPage: 0,
     );
+    notifyListeners();
     controller.addListener(
       () {
         currenIndex = controller.page!;
-        notifyListeners();
       },
     );
     notifyListeners();

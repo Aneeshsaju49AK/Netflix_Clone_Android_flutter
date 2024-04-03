@@ -89,7 +89,7 @@ class MyNetflixScreen extends StatelessWidget {
                                 size: 23,
                                 weight: FontWeight.w700,
                               ),
-                              ListBuilderScreen(isGame: false),
+                              // ListBuilderScreen(isGame: false ),
                             ],
                           );
                         },
